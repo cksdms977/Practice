@@ -15,9 +15,7 @@ public class InitMain {
 		for (int i = 0; i < 5; i++) {
 			InitblockTest t = new  InitblockTest();
 			System.out.println(t.test);
-			
-			
-			
+		
 		}
 		
 	}
