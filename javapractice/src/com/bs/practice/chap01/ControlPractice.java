@@ -233,19 +233,84 @@ public class ControlPractice {
     	// 앞에 구현한 실습문제를 선택하여 실행할 수 있는 메뉴화면을 구현하세요.  
     		  Scanner sc = new Scanner(System.in);
     		  
-    		  System.out.println("=== 계절구하기 === ");
-    		  System.out.print("계절 입력 : ");
-    		  String month = sc.next();
+    		  int choice;
+    		  do {
+				
+    		  System.out.println("=== 구현 실행 구하기 === ");
+    		  System.out.print("1 : ");
+    		  System.out.print("2 : ");
+    		  System.out.print("3. : ");
+    		  System.out.print("4. : ");
+    		  System.out.print("5. : ");
+    		  System.out.print("6. : ");
+    		  System.out.print("7. : ");
+    		  System.out.print("8. : ");
+    		  System.out.print("9. : ");
+    		  System.out.println("선택 : ");
+    		  choice = sc.nextInt();
+    		
+    		  switch (choice) {
+			case 1: practice1();break;
+			case 2: practice2();break;
+			case 3: practice3();break;
+			case 4: practice4();break;
+			case 5: practice5();break;
+			case 6: practice6();break;
+			case 7: practice7();break;
+			case 8: practice8();break;
+			case 9: practice9();break;
+			default :  System.out.println("잘못된 선택입니다. 다시 선택해주세요");
+			
+			}
     		  
-    		  switch (month) {
-    		   
-    		  
-    		  }
-    
-   
-    }
+			 } while ((int)choice > 1 && (int)choice < 10);
 
-	
-	}
+}
+    
+    public void practice11() {
+//    	정수를 이용해서 4자리 비밀번호를 만들려고 하는데
+//    	이 때 4자리 정수를 입력 받아 각 자리 수에 중복되는 값이 없을 경우 ‘생성 성공’ 
+//    	중복 값이 있으면 ‘중복 값 있음‘
+//    	자리수가 안 맞으면 ‘자리 수 안 맞음‘ 출력 
+//    	단, 제일 앞자리 수의 값은 1~9 사이 정수
+//    	ex.
+//    	비밀번호 입력(1000~9999) : 1234 
+//    	성공
+//    	비밀번호 입력(1000~9999) : 56555 
+//    	자리수 안맞음
+//    	비밀번호 입력(1000~9999) : 5685 
+//    	실패
+    	
+//    	Scanner sc = new Scanner(System.in);
+//    	
+//    	System.out.println("비밀번호(1000~9999) : ");
+//    	int password = sc.nextInt();
+//    	
+//    	if (password < 1000 || password > 9999) { // 자리수 여부
+//    		System.out.println("자리 수 안 맞음");
+//		}else {
+//			int fistsu = password / 1000;
+//			int fresult = fistsu*1000;
+//			int secondsu = (password / 100) - fresult; 
+//			
+//			int sresult = (password / 10) - secondsu;
+//			int thirdsu =  (password / 10) - ;
+//			int fourthsu = (password / 10);
+//		
+//			} if (sresult ) {
+//	                System.out.println("중복 값 있음");
+//	            } else {
+//	                // 성공
+//	                System.out.println("생성 성공");
+//	            }
+//    		
+//    }
+    	
+    	
+    }   	
+}
+    
+    
+
 	
 
