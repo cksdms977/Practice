@@ -1,6 +1,7 @@
 package com.obj.run;
 
 import com.obj.model.vo.Person;
+import com.obj.model.vo.Animal;
 
 public class ContructorMain {
 
@@ -19,6 +20,29 @@ public class ContructorMain {
 		System.out.println(p1.name + p1.age + p1.height + p1.gender);
 		System.out.println(p2.name + p2.age + p2.height + p2.gender);
 		
+		// 매개변수있는 생성자 이용하기
+		// 동물정보 저장할 수 있는 클래스 만들기 com.obj.model.vo
+		// 종류, 이름, 몸무게, 길이, 서식지
+		// 개 뽀삐 5kg, 50cm 우리집
+		// 거북이, 꼬북이, 1.2kg, 5cm, 어항
+		Animal cat = new Animal("고양이", "엉", 4.5, 40, "솔이집");
+		
+		Animal a = new Animal("개", "뽀삐", 5, 50, "우리집");
+		
+		System.out.print(a.type + " " + a.name + " " + a.weight + "kg" + " " + a.length + "cm" + " " + a.habitat);
+	
+		Animal b = new Animal("거북이", "꼬북이", 1.2, 5, "어항" );
+		
+		System.out.print(b.type + " " + b.name + " " + b.weight + "kg" + " " + b.length + "cm" + " " + b.habitat);
+		
+		System.out.println("-------------------------");
+		Person p3 = new Person("윤지환", '남');
+		System.out.println(p3.name + p3.gender);
+		
+		Person p4 = new Person("윤주호", 26);
+		System.out.println(p4.name + p4.age);
+	
+	
 	}
 
 }
