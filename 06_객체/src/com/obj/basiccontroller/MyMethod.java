@@ -2,6 +2,8 @@ package com.obj.basiccontroller;
 
 import java.util.*;
 
+import com.obj.model.vo.Employee;
+
 
 
 
@@ -82,8 +84,28 @@ public class MyMethod {
 		}
 		return flag;
 		
-		
 	}
+	
+
+	// Employee 객체를 생성해주는 메소드 만들기(2가지 방법 처음 반환형없는 메소드, 반환형 있는메소드)
+	
+	public void makeEmployee(Employee e, String name, String department, int salary, double bonus) {
+		e.setName(name);
+		e.setBonus(bonus);
+		e.setDepartment(department);
+		e.setSalary(salary);
+	}
+	
+	public Employee makeEmployee2(String name, String departement, int salary, double bonus) {
+		Employee e = new Employee(); // 생성자 만들어준다.
+		e.setName(name);
+		e.setDepartment(departement);
+		e.setSalary(salary);
+		e.setBonus(bonus);
+		return e;
+	}
+	
+	
 	
 }
 
