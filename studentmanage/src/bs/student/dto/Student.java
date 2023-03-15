@@ -1,6 +1,9 @@
 package bs.student.dto;
 
+import java.text.SimpleDateFormat;
+
 public class Student {
+	private static int count;// 학번을 생성할때마다 자동으로 생성하도록 만드는 기능
 	
 	private String name;
 	private String studentNo;
@@ -9,13 +12,24 @@ public class Student {
 	private String address;
 	private char gender;
 	
+	
+	{
+		// 학번을 생성할때마다 자동으로 생성하도록 만드는 기능
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+		studentNo = sdf.format(System.currentTimeMillis()) + "_" + (++count); 
+		
+		
+	}
+	
+	
+	
 	public Student() {}
 	
-	public Student(String name, String studentNo, 
+	public Student(String name, //String studentNo, 
 			String major, int grade, String address, char gender) {
 		
 		this.name = name;
-		this.studentNo = studentNo;
+		//this.studentNo = studentNo;
 		this.major = major;
 		this.address = address;
 		this.grade = grade;
@@ -65,6 +79,8 @@ public class Student {
 				+" "+this.address+" "+this.gender;
 	}
 	
+	
+		
 	
 		
 }
